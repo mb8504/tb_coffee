@@ -5,23 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>True Believer Coffee</title> 
+    <script src="/js/menu.js" defer></script>
 </head>
 <body>
     
-    <header>
-        <div class="header_container container">
-            <a href="index.html">True Believers Coffee</a>
-        </div>
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__logo">
+                <a href="index.html"><img class="header__logo__img"  src="/images/tb_logo_final.png" alt=""></a>
+            </div>
+            <button class="header__button" aria-controls="primary-nav" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
 
-        <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Store</a></li>
-                <li><a href="">Contact Us</a></li>
-            </ul>
-        </nav>
+            <nav class="nav">
+                <ul id="primary-nav" data-visible="false" class="nav__ul">
+                    <li class="nav__li"><a href="">Home</a></li>
+                    <li class="nav__li"><a href="">Store</a></li>
+                    <li class="nav__li"><a href="">Contact Us</a></li>
+                </ul>
+            </nav>
+            
+        </div>
     </header>
 
+
+
+    <section class="section">
+        <div class="container">
+            <img src="/images/tb_logo.png" alt="">
+        </div>
+    </section>
 
 </body>
 </html>

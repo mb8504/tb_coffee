@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.8rem;
+    align-items: center;
+}
+
+/* START NAV */
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(/images/main_image.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 100vh;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 5rem;
+    width: 5rem;
+}
+
+.header__logo__img {
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+
+.header__button {
+    display: block;
+    position: absolute;
+    background: url(../images/menubar.png);
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: 39px;
+    background-position: center; 
+    cursor: pointer;
+    border: none;
+    top: 1rem;
+    right: 0.6rem;
+    z-index: 9999;
+}
+
+.header__button[aria-expanded='true'] {
+    background: url(../images/close.png);
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: 39px;
+    background-position: center; 
+    cursor: pointer;
+    border: none;
+    top: 1rem;
+    right: 0.6rem;
+    z-index: 9999;
+}
+
+.nav__ul {
+    text-decoration: none;
+    background: hsl(0, 0%, 0%, 0.85);
+    position: fixed;
+    inset: 0 0 0 30%;
+    padding: 5rem 2em;
+    transform: translateX(100%);
+}
+
+.nav__li {
+    list-style: none;
+    padding-bottom: 2rem;
+}
+
+.nav__li a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav__ul[data-visible='true'] {
+    transform: translateX(0%);
+}
+
+@media (min-width: 768px) {
+    .nav__ul {
+        display: flex;
+        background: none;
+        position: unset;
+        inset: 0;
+        padding: 0;
+        align-items: center;
+        transform: none;
+        transition: none;
+    }
+    .nav__li {
+        padding-left: 4rem;
+        padding-bottom: 0;
+    }
+    .header__button {
+        display: none;
+    }
+
+}
+/* END NAV */

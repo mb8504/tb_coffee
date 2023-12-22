@@ -13,21 +13,21 @@ body {
 
 h1 {
     padding-bottom: 0.5rem;
-    font-size: 36px;
+    font-size: 2.2rem;
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 button {
-    border: 2px solid #27CEEF;
+    border: 0.125em solid #27CEEF;
     font-size: 1rem;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
-    padding: 0.625em 1.875em;
+    padding: 0.625em 1em;
     cursor: pointer;
     color: #27CEEF;
     font-weight: 450;
@@ -42,6 +42,7 @@ button {
     align-items: center;
     line-height: 1.5;
 }
+
 
 /* START NAV */
 .header {
@@ -73,11 +74,11 @@ button {
 .sr-only:not(:focus):not(:active) {
     clip: rect(0 0 0 0); 
     clip-path: inset(50%);
-    height: 1px;
+    height: 0.0625rem;
     overflow: hidden;
     position: absolute;
     white-space: nowrap; 
-    width: 1px;
+    width: 0.0625rem;
   }
 
 .header__button {
@@ -87,7 +88,7 @@ button {
     width: 4rem;
     height: 4rem;
     background-repeat: no-repeat;
-    background-size: 39px;
+    background-size: 2.5rem;
     background-position: center; 
     cursor: pointer;
     border: none;
@@ -101,7 +102,7 @@ button {
     width: 4rem;
     height: 4rem;
     background-repeat: no-repeat;
-    background-size: 39px;
+    background-size: 2.5rem;
     background-position: center; 
     cursor: pointer;
     border: none;
@@ -122,6 +123,8 @@ button {
 .nav__li {
     list-style: none;
     padding-bottom: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
 }
 
 .nav__li a {
@@ -145,14 +148,31 @@ button {
         transition: none;
     }
     .nav__li {
-        padding-left: 4rem;
+        margin-left: 3rem;
         padding-bottom: 0;
+        position: relative;
+    }
+   .nav__a::after {
+        content: '';
+        height: .2rem;
+        width: 100%;
+        background: white;
+        display: block;
+        position: absolute;
+        opacity: 0;
+        transition: all 0.2s;
+        pointer-events: none;
+    }
+    .nav__a:hover::after,
+    .nav__a:focus::after {
+        opacity: 1;
     }
     .header__button {
         display: none;
     }
 }
 /* END NAV */
+
 
 /* START INTRO */
 .intro__container {
@@ -163,6 +183,126 @@ button {
     margin-top: 3rem;
     margin-bottom: 8rem;
     text-align: center;
+    text-decoration: none;
+}
+
+.intro__button__link {
+    text-decoration: none;
+}
+
+.intro__button__link:visited {
+    color: black;
 }
 
 /* END INTRO */
+
+
+/* START SUBSCRIPTION */
+.subscription__container {
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding-top: 4rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.subscription__img {
+    height: auto;
+    width: 100%;
+}
+
+.subscription .container img {
+    padding: 0;
+}
+
+.subscription__button__container {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.subscription__button__link {
+    text-decoration: none;
+}
+
+.subscription__button__link:visited {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .subscription__container {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .subscription__button__container {
+        margin-top: 4rem;
+        margin-bottom: 0;
+    }
+
+    .subscription__img {
+        width: 50%;
+    }
+
+    .subscription__title {
+        padding-bottom: 2rem;
+    }
+}
+/* END SUBSCRIPTION */
+
+
+/* START CONTEST */
+.contest__container {
+    padding-top: 8rem;
+}
+
+.contest__title {
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.contest__button__container {
+    text-align: center;
+}
+
+.contest__button {
+    background-color: #27CEEF;
+    color: white;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contest__img {
+    height: auto;
+    width: 100%;
+}
+/* END CONTEST */
+
+/* START REVIEWS */
+.reviews__img {
+    width: 100%;
+}
+.reviews__img__container {
+    background-color: #121212;
+}
+
+@media (min-width: 768px) {
+    .reviews__img {
+        height: 300px;
+        width: 650px;
+    }
+
+    .reviews__img__container {
+        margin-top: 90px;
+        margin-bottom: 90px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* END REVIEWS */

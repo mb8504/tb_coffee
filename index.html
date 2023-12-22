@@ -20,9 +20,9 @@
 
             <nav class="nav">
                 <ul id="primary-nav" data-visible="false" class="nav__ul">
-                    <li class="nav__li"><a href="">Home</a></li>
-                    <li class="nav__li"><a href="">Store</a></li>
-                    <li class="nav__li"><a href="">Contact Us</a></li>
+                    <li class="nav__li"><a href="index.html" class="nav__a">Home</a></li>
+                    <li class="nav__li"><a href="/pages/store.html" class="nav__a">Store</a></li>
+                    <li class="nav__li"><a href="#" class="nav__a">Contact Us</a></li>
                 </ul>
             </nav>
 
@@ -38,11 +38,54 @@
             </p>
             <div class="intro__button">
                 <button class="intro__button__menu" type="button">
-                    See our full menu
+                    <a href="/pages/store.html" class="intro__button__link">See our full menu</a>
                 </button>
             </div>
         </div>
     </section>
+    
+    <section class="subscription">
+        <div class="subscription__container container">
+            <div class="subscription__body">
+                <h2 class="subscription__title">Great Coffee Delivered to Your Door</h2>
+                <p class="subscription__text">
+                    Brew the coffee you love in the comfort of your own home with one of our three tiered subscriptions. 
+                </p>
+                <div class="subscription__button__container">
+                    <button class="subscription__button" type="button">
+                        <a href="/pages/store.html" class="subscription__button__link">Start Brewing</a>
+                    </button>
+                </div>
+            </div>
+            <img class="subscription__img" src="images/coffee.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="contest">
+        <div class="contest__container container">
+            <h2 class="contest__title">Win A Year Of FREE Coffee!</h2>
+            <p class="contest__text">
+                It's no secret that we LOVE coffee. Now, we want to share that love with you! From now until October 31, we're giving our customers a chance to create a custom design that will go on our new line of coffee "Brotherly Love" in honor of our favorite city. <br>
+                <br>
+                All designs must be in by Ocotber 25, 2023. On October 31, we'll choose one winner who will receive one year of FREE coffee through our subscription. Plus, the winning design will be front and center on our shelves as the artwork for our new coffee line. 
+            </p>
+            <div class="contest__button__container">
+                <button class="contest__button" type="button">
+                    Submit Your Design!
+                </button>
+            </div>
+            <div class="contest__img__container">
+                <img src="images/coffee_competition.jpg" class="contest__img" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="reviews__img__container fade">
+            <img src="images/quote 1.png" class="reviews__img" id="quote-img" alt="">
+        </div>
+    </section>
+    <script src="js/review.js"></script>
 
 </body>
 </html>

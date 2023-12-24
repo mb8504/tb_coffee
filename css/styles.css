@@ -46,7 +46,8 @@ button {
 
 /* START NAV */
 .header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(/images/main_image.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.3)), url(/images/main_image.jpg);
     background-size: cover;
     background-position: center;
     color: white;
@@ -177,6 +178,7 @@ button {
 /* START INTRO */
 .intro__container {
     padding-top: 8rem;
+    margin-bottom: 8rem;
 }
 
 .intro__button {
@@ -367,3 +369,59 @@ button {
     font-size: .8rem;
 }
 /* END FOOTER SOCIAL MEDIA */
+
+
+/* START NAV--STORE PAGE */
+
+.header--store {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.3)), url(/images/store_page_hero.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 50vh;
+}
+/* END NAV--STORE PAGE */
+
+/* START PRODUCT LISTING--STORE PAGE */
+.store__title {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.store__text {
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 
+        repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.card {
+    box-shadow: 0 .25rem .4rem rgb(0 0 0 / .3);
+}
+
+.card__img{
+    width: 100%;
+}
+
+.card__content {
+    padding: .5rem;
+}
+
+.card__title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #27CEEF;
+}
+
+.card__price {
+    font-size: 1.2rem;
+}
+
+
+/* END PRODUCT LISTING--STORE PAGE */

@@ -467,20 +467,15 @@ button {
     text-align: center;
 }
 
-.cart__1bag {
-
-}
-
 .cart__3bag {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
 
-/* @media (max-width: 1037px) {
-    .cart__6bag {
-        margin-top: 0.5rem;
-    }
-} */
+.clicked {
+    background-color: #27CEEF;
+    color: white;
+}
 
 @media (min-width: 768px) {
     .nav--product__page .nav__li a {

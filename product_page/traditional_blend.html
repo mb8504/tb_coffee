@@ -44,12 +44,13 @@
             <div class="cart">
                 <div class="card__content">
                     <div class="card__title card__title--product">True Believers Coffee Traditional Blend</div>
-                    <p class="card__price">$14.00</p>
-                    <p class="quantity">How many bags? Each bag is 10oz</p>
+                    <p id="cardPrice" class="card__price">$8.00</p>
+                    <p class="quantity">How many bags? Each bag is <strong>12oz</strong></p>
                 </div>
-                <button class="cart__1bag">1 bag</button>
-                <button class="cart__3bag">3 bags</button>
-                <button class="cart__6bag">6 bags</button>
+                <button class="cart__1bag btn" onclick="changeBackground(this); changePrice(8.00)">1 bag</button>
+                <button class="cart__3bag btn" onclick="changeBackground(this); changePrice(24.00)">3 bags</button>
+                <button class="cart__6bag btn" onclick="changeBackground(this); changePrice(48.00)">6 bags</button>
+                <script src="/js/product_click.js" defer></script>
             </div>
         </div>
     </section>

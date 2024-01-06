@@ -1,27 +1,35 @@
-// START BUTTON COLOR CHANGE
-let currentButton = null;
+// START BUTTON CLICK FUNCTIONALITY
+let quantityElement = document.getElementById('counter');
 
-const changeBackground = (button) => {
-    if (currentButton) {
-        currentButton.classList.remove('clicked');
-    }
-
-    button.classList.add('clicked');
-    currentButton = button;
+function increaseQuantity() {
+    let currentQuantity = parseInt(quantityElement.textContent, 10);
+    quantityElement.textContent = currentQuantity + 1;
+    updateTotalAmount();
 }
-// END BUTTON COLOR CHANGE
 
+function decreaseQuantity() {
+    let currentQuantity = parseInt(quantityElement.textContent, 10);
+    if (currentQuantity > 1) {
+        quantityElement.textContent = currentQuantity - 1;
+        updateTotalAmount();
+    }
+}
+
+// END BUTTON CLICK FUNCTIONALITY
 
 // START PRICE CHANGE
-let currentPrice = 14.00;
+let totalAmountElement = document.getElementById('cardPrice');
+let currentPrice = 8.00;
 
-function changePrice(amount) {
-    // Change the price based on the amount parameter
-    currentPrice = amount;
-    console.log(currentPrice);
-
-    // Update the displayed price
-    document.getElementById('cardPrice').textContent = '$' + currentPrice.toFixed(2);
-
+function updateTotalAmount() {
+    let currentQuantity = parseInt(quantityElement.textContent, 10);
+    let totalAmount = currentPrice * currentQuantity;
+    totalAmountElement.textContent = '$' + totalAmount.toFixed(2);
 }
 // END PRICE CHANGE
+
+// START ADD TO CART
+function addItemToCart() {
+
+}
+// END ADD TO CART

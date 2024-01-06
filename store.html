@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>True Believer Coffee</title> 
     <script src="/js/menu.js" defer></script>
 </head>
@@ -11,6 +12,9 @@
     
     <header class="header header--store">
         <div class="header__container container">
+            <span class="nav__icon nav__icon--mobile"><a href="/product_page/cart.html"><i class="fas fa-cart-plus fa-2x"></i></a></span>
+            <div class="cart-items">0</div>
+
             <div class="header__logo">
                 <a href="index.html"><img class="header__logo__img"  src="/images/tb_logo_final.png" alt=""></a>
             </div>
@@ -23,6 +27,7 @@
                     <li class="nav__li"><a href="index.html" class="nav__a">Home</a></li>
                     <li class="nav__li"><a href="store.html" class="nav__a">Store</a></li>
                     <li class="nav__li"><a href="#" class="nav__a">Contact Us</a></li>
+                    <span class="nav__icon--desktop"><a href="/product_page/cart.html"><i class="fas fa-cart-plus fa-2x"></i></a></span>
                 </ul>
             </nav>
 
@@ -42,15 +47,16 @@
                 <div class="card stacked">
                     <a href="/product_page/traditional_blend.html"><img src="/images/card1.png" alt="" class="card__img"></a>
                     <div class="card__content">
-                        <TBC class="card__title">True Believers Coffee Traditional Blend</TBC>
-                        <p class="card__price">$14.00 10oz</p>
-                        <!-- <p class="card__description">10oz</p> -->
+                        <a href="/product_page/traditional_blend.html">
+                            <p class="card__title">True Believers Coffee Traditional Blend</p>
+                            <p class="card__price">$14.00 10oz</p>
+                        </a>
                     </div>
                 </div>
                 <div class="card stacked">
                     <img src="/images/card2.png" alt="" class="card__img">
                     <div class="card__content">
-                        <TBC class="card__title">True Believers Coffee Summer Blend</TBC>
+                        <p class="card__title">True Believers Coffee Summer Blend</p>
                         <p class="card__price">$14.00 10oz</p>
                         <!-- <p class="card__description">10oz</p> -->
                     </div>

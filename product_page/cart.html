@@ -30,47 +30,45 @@
                     <span class="nav__icon--desktop"><a href="/product_page/cart.html"><i class="fas fa-cart-plus fa-2x dark-icon"></i></a></span>
                 </ul>
             </nav>
-            
 
         </div>
     </header>
 
     <section>
         <div class="store">
-            <h1 class="store__title">True Believers Coffee Store</h1>
+            <h1 class="store__title">Your Cart</h1>
             <p class="store__text">TBC members get FREE delivery!</p>
         </div>
     </section>
 
-    <section class="product">
+    <section class="cart container">
+        <table class="cart__table">
+            <thead class="cart__table--header">
+                <tr>
+                    <th class="text-left" colspan="2">Product</th>
+                </tr>
+            </thead>
+        </table>
+    </section>
+
+    <!-- <section class="product">
         <div class="product__container container">
             <div class="product__card">
                 <img src="/images/card1.png" alt="" class="product__card__img card__img">
             </div>
-
             <div class="cart">
                 <div class="card__content">
                     <div class="card__title card__title--product">True Believers Coffee Traditional Blend</div>
                     <p id="cardPrice" class="card__price">$8.00</p>
                     <p class="quantity">How many bags? Each bag is <strong>12oz</strong></p>
                 </div>
-                <div class="counter">
-                    <button class="counter__button" onclick="decreaseQuantity()">
-                        <i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i>
-                    </button>
-                    <span id="counter" class="counter__quantity">
-                        1
-                    </span>
-                    <button class="counter__button" onclick="increaseQuantity()">
-                        <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
-                    </button>
-                    <script src="/js/product_click.js" defer></script>
-                </div>
-                <button class="cart__add">Add to Cart</button>
+                <button class="cart__1bag btn" onclick="changeBackground(this); changePrice(8.00)">1 bag</button>
+                <button class="cart__3bag btn" onclick="changeBackground(this); changePrice(24.00)">3 bags</button>
+                <button class="cart__6bag btn" onclick="changeBackground(this); changePrice(48.00)">6 bags</button>
+                <script src="/js/product_click.js" defer></script>
             </div>
-
         </div>
-    </section>
+    </section> -->
     
     <footer class="footer">
         <div class="footer__newsletter__container container">

@@ -476,6 +476,10 @@ button {
     margin-bottom: 8rem;
 }
 
+.nav--product__page {
+    display: flex;
+}
+
 .nav--product__page .nav__li a {
     color: white;
 }
@@ -577,3 +581,26 @@ button {
 }
 
 /* END PRODUCT_PAGE--TRADITIONAL BLEND */
+
+
+
+
+
+
+
+
+
+
+/* START CONTACT PAGE */
+.header--contact {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.3)), url(/images/contact_hero.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 55vh;
+}
+
+
+
+/* END CONTACT PAGE */

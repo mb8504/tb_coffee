@@ -14,7 +14,8 @@
     <header class="header--product__page">
         <div class="header__container container">
             <span class="nav__icon nav__icon--mobile"><a href="cart.html"><i class="dark-icon fas fa-cart-plus fa-2x"></i></a></span>
-            <div class="cart-items" id="cartCount">0</div>
+            <div class="cart-items cart-items__mobile" id="cartCount">0</div>
+            
 
             <div class="header__logo">
                 <a href="/index.html"><img class="header__logo__img"  src="/images/tb_logo_final.png" alt=""></a>
@@ -28,10 +29,11 @@
                     <li class="nav__li"><a href="/index.html" class="nav__a">Home</a></li>
                     <li class="nav__li"><a href="/store.html" class="nav__a">Store</a></li>
                     <li class="nav__li"><a href="/contact.html" class="nav__a">Contact Us</a></li>
+                    <div id="cart" class="cart">
+                        <span class="nav__icon--desktop"><div class="cart-items cart-items__desktop" id="cartCount">0</div><a href="/cart.html"><i class="fas fa-cart-plus fa-2x dark-icon"></i></a>
+                        </span>
+                    </div>
                 </ul>
-                <div id="cart" class="cart">
-                    <span class="nav__icon--desktop"><a href="/cart.html"><i class="fas fa-cart-plus fa-2x dark-icon"></i></a></span>
-                </div>
             </nav>
 
         </div>
@@ -44,34 +46,45 @@
         </div>
     </section>
 
-    <section class="cart container">
-        <table class="cart__table">
-            <thead class="cart__table--header">
-                <tr>
+    <section class="cart__content--mobile container">
+        <div class="cart__item">
+            <img class="cart__img" src="./images/card1.png" alt="traditional coffee">
+            <div class="cart__details">
+                <h4 class="cart__details__title">traditional blend</h4>
+                <h5 class="cart__details__cost">$8</h5>
+                <span class="cart__details__remove__item">remove</span>
+            </div>
+            <div class="cart__item__amount">
+                <i class="fas fa-chevron-up"></i>
+                <p class="cart__item__amount__quantity">1</p>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="cart__content--desktop container">
+        <table class="cart__list__table container">
+            <thead class="cart__list__table--header">
+                <tr class="cart__list__table__row">
                     <th class="text-left" colspan="2">Product</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-right">Total</th>
                 </tr>
             </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="cart__item">
+                            <img class="cart__item__img" src="./images/card1.png" alt="">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </section>
 
-    <!-- <section class="product">
-        <div class="product__container container">
-            <div class="product__card">
-                <img src="/images/card1.png" alt="" class="product__card__img card__img">
-            </div>
-            <div class="cart">
-                <div class="card__content">
-                    <div class="card__title card__title--product">True Believers Coffee Traditional Blend</div>
-                    <p id="cardPrice" class="card__price">$8.00</p>
-                    <p class="quantity">How many bags? Each bag is <strong>12oz</strong></p>
-                </div>
-                <button class="cart__1bag btn" onclick="changeBackground(this); changePrice(8.00)">1 bag</button>
-                <button class="cart__3bag btn" onclick="changeBackground(this); changePrice(24.00)">3 bags</button>
-                <button class="cart__6bag btn" onclick="changeBackground(this); changePrice(48.00)">6 bags</button>
-                <script src="/js/product_click.js" defer></script>
-            </div>
-        </div>
-    </section> -->
+
     
     <footer class="footer">
         <div class="footer__newsletter__container container">

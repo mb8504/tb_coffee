@@ -158,6 +158,9 @@ button {
 }
 
 @media (min-width: 768px) {
+    .nav {
+        display: flex;
+    }
     .nav__ul {
         display: flex;
         background: none;
@@ -671,6 +674,18 @@ button {
 
   /*---------- End of Cart Content -------------------- */
 
+  .cart__total__plus__clear {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .cart__total__title {
+    margin-bottom: 1rem;
+  }
+
+.cart__clear {
+    margin-bottom: 8rem;
+}
 
 /* END CART PAGE */

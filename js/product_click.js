@@ -98,3 +98,10 @@ function updateCartCount() {
 
 // Load the cart from local storage when the page loads
 loadCartFromLocalStorage();
+
+
+// <------- START CART PAGE ------->
+
+
+
+// <------- END CART PAGE ------->

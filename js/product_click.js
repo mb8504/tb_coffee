@@ -19,11 +19,11 @@ function decreaseQuantity() {
 
 // START PRICE CHANGE
 let totalAmountElement = document.getElementById('cardPrice');
-let currentPrice = 8.00;
+let originalPrice = 8.00;
 
 function updateTotalAmount() {
     let currentQuantity = parseInt(quantityElement.textContent, 10);
-    let totalAmount = currentPrice * currentQuantity;
+    let totalAmount = originalPrice * currentQuantity;
     totalAmountElement.textContent = '$' + totalAmount.toFixed(2);
 }
 // END PRICE CHANGE
@@ -46,6 +46,8 @@ let shoppingCart = {
     totalPrice: 0.00,
 };
 
+
+
 // Function to load the cart from local storage when the page loads
 function loadCartFromLocalStorage() {
     let savedCart = localStorage.getItem('shoppingCart');
@@ -56,14 +58,16 @@ function loadCartFromLocalStorage() {
 }
 
 // START ADD TO CART
+// Function to Add To Cart
 function addItemToCart() {
     let currentQuantity = parseInt(quantityElement.textContent, 10);
+    let productTitle = document.querySelector('.card__title').textContent;
 
-    // Create an item object with relevant information
+    // item object with relevant information
     let item = {
-        name: "Product Name",  // Set the actual product name
-        price: currentPrice,
-        quantity: currentQuantity
+        name: productTitle,
+        originalPrice: originalPrice,
+        quantity: currentQuantity,
     };
 
     // Add the item to the cart
@@ -71,14 +75,15 @@ function addItemToCart() {
 
     // Update total quantity and total price in the cart
     shoppingCart.totalQuantity += currentQuantity;
-    shoppingCart.totalPrice += currentPrice * currentQuantity;
+    shoppingCart.totalPrice += originalPrice * currentQuantity;
 
-    // Optionally, you can update the cart display in the navbar or perform any other action
     updateCartCount();
 
     // Save the cart to local storage
     saveCartToLocalStorage('shoppingCart');
 }
+
+
 
 // Function to save the cart to local storage
 function saveCartToLocalStorage() {

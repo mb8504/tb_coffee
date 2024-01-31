@@ -688,4 +688,16 @@ button {
     margin-bottom: 8rem;
 }
 
+.text-left {
+    text-align: left;
+}
+
+.cart-flex-container {
+    display: flex;
+}
+
+.cart__total__plus__clear {
+    margin-top: 8rem;
+}
+
 /* END CART PAGE */

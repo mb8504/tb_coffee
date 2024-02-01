@@ -46,25 +46,29 @@
         </div>
     </section>
 
-    <section class="cart__content--mobile container">
-        <div class="cart__item">
-            <img class="cart__img" src="./images/card1.png" alt="traditional coffee">
-            <div class="cart__details">
-                <h4 class="cart__details__title">traditional blend</h4>
-                <h5 class="cart__details__cost">$8</h5>
-                <span class="cart__details__remove__item">remove</span>
+    <!-- <section class="cart__content--mobile container">
+            <div class="product__container container">
+                <div class="cart">
+                    <div class="card__content">
+                        <p id="cardPrice" class="card__price">$8.00</p>
+                        <p class="quantity">How many bags? Each bag is <strong>12oz</strong></p>
+                    </div>
+                    <div class="counter">
+                        <button class="counter__button" onclick="decreaseQuantity()">
+                            <i class="fa fa-minus-circle fa-2x" aria-hidden="true"></i>
+                        </button>
+                        <span id="counter" class="counter__quantity">
+                            1
+                        </span>
+                        <button class="counter__button" onclick="increaseQuantity()">
+                            <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
+                        </button>
+                        <script src="/js/product_click.js" defer></script>
+                    </div>
+                    <button class="cart__add" onclick="addItemToCart()">Add to Cart</button>
+                </div>
             </div>
-            <div class="cart__item__amount">
-                <i class="fas fa-chevron-up"></i>
-                <p class="cart__item__amount__quantity">1</p>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-        </div>
-        <div class="cart__total__plus__clear">
-            <h3 class="cart__total__title">your total: $ <span class="cart-total">0</span></h3>
-            <button class="cart__clear banner-btn">clear cart</button>
-        </div>
-    </section>
+    </section> -->
 
     <section class="cart__content--desktop container">
         <table class="cart__list__table container">
@@ -78,16 +82,16 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="cart-flex-container">
-                        <div class="cartContainer" id="cartContainer"></div>
-                    </td>
+
                 </tr>
             </tbody>
         </table>
     </section>
+    
+    <div id="cartContainer" class="container cart__flex__container"></div>
 
 <!-- Shopping Cart Page HTML -->
-<!-- <div id="cartContainer"></div> -->
+
     
     <footer class="footer">
         <div class="footer__newsletter__container container">

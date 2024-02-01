@@ -48,11 +48,33 @@ let shoppingCart = {
 
 
 
+function updateCartDisplay() {
+    let cartContainer = document.getElementById('cartContainer');
+    cartContainer.innerHTML = ""; // Clear existing content
+
+    // Iterate through items and generate HTML
+    shoppingCart.items.forEach(item => {
+        let itemElement = document.createElement('div');
+        itemElement.classList.add('cart__item__container'); // Add container class
+        itemElement.innerHTML = `
+            <div class="item__image">
+                <img src="${item.image}" alt="${item.name}" style="width: 100px; height: 100px;">
+            </div>
+            <div>${item.name} - Quantity: ${item.quantity} - Price: $${item.originalPrice.toFixed(2)}</div>
+        `;
+        cartContainer.appendChild(itemElement);
+    });
+}
+
+
+
+
 // Function to load the cart from local storage when the page loads
 function loadCartFromLocalStorage() {
     let savedCart = localStorage.getItem('shoppingCart');
     if (savedCart) {
         shoppingCart = JSON.parse(savedCart);
+        updateCartDisplay();
         updateCartCount(); // Update the cart count when loading from local storage
     }
 }
@@ -62,12 +84,14 @@ function loadCartFromLocalStorage() {
 function addItemToCart() {
     let currentQuantity = parseInt(quantityElement.textContent, 10);
     let productTitle = document.querySelector('.card__title').textContent;
+    let productImage = document.querySelector('.product__card__img').src;
 
     // item object with relevant information
     let item = {
         name: productTitle,
         originalPrice: originalPrice,
         quantity: currentQuantity,
+        image: productImage,
     };
 
     // Add the item to the cart

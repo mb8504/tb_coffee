@@ -54,13 +54,16 @@ function updateCartDisplay() {
 
     // Iterate through items and generate HTML
     shoppingCart.items.forEach(item => {
+        let totalPrice = item.originalPrice * item.quantity; // Calculate total price
+
         let itemElement = document.createElement('div');
         itemElement.classList.add('cart__item__container'); // Add container class
         itemElement.innerHTML = `
             <div class="item__image">
                 <img src="${item.image}" alt="${item.name}" style="width: 100px; height: 100px;">
             </div>
-            <div>${item.name} - Quantity: ${item.quantity} - Price: $${item.originalPrice.toFixed(2)}</div>
+            <div>${item.name} - Price: $${item.originalPrice.toFixed(2)} - Quantity: ${item.quantity} - Total Price: $${totalPrice.toFixed(2)} </div>
+            
         `;
         cartContainer.appendChild(itemElement);
     });

@@ -667,9 +667,22 @@ button {
     align-items: center;
 }
 .item__image {
-    width: 110px;
-    height: 110px;
-    margin-right: 10px;
+    width: 2rem;
+    height: 2rem;
+}
+
+.cart-table {
+    width: 100%;
+}
+
+.table__row__headers {
+    display: none;
+}
+
+.item__row td {
+    flex: 1; /* Allow content to fill remaining space */
+    padding: 5px; /* Add padding to each td */
+    font-size: 0.8rem;
 }
 
     @media (min-width: 768px) {
@@ -687,6 +700,14 @@ button {
             width: 110px;
             height: 110px;
             margin-right: 10px;
+        }
+        .table__row__headers {
+            display: contents;
+        }
+        .item__row td {
+            flex: 0; /* Allow content to fill remaining space */
+            padding: 0; /* Add padding to each td */
+            font-size: 1rem;
         }
     }
 

@@ -47,27 +47,54 @@ let shoppingCart = {
 };
 
 
+// START TABLE FOR CART ITEMS
 
 function updateCartDisplay() {
     let cartContainer = document.getElementById('cartContainer');
     cartContainer.innerHTML = ""; // Clear existing content
 
-    // Iterate through items and generate HTML
+    // Create table element
+    let table = document.createElement('table');
+    table.classList.add('cart-table');
+    table.classList.add('cart__list__table');
+
+    // Create table header
+    let tableHeader = document.createElement('thead');
+    tableHeader.innerHTML = `
+        <tr class="table__row__headers">
+            <th></th>
+            <th class="text-left">Name</th>
+            <th class="text-left">Price</th>
+            <th class="text-left">Quantity</th>
+            <th class="text-left">Total Price</th>
+        </tr>
+    `;
+    table.appendChild(tableHeader);
+
+    // Create table body
+    let tableBody = document.createElement('tbody');
+
+    // Iterate through items and generate table rows
     shoppingCart.items.forEach(item => {
         let totalPrice = item.originalPrice * item.quantity; // Calculate total price
 
-        let itemElement = document.createElement('div');
-        itemElement.classList.add('cart__item__container'); // Add container class
-        itemElement.innerHTML = `
-            <div class="item__image">
-                <img src="${item.image}" alt="${item.name}" style="width: 100px; height: 100px;">
-            </div>
-            <div>${item.name} - Price: $${item.originalPrice.toFixed(2)} - Quantity: ${item.quantity} - Total Price: $${totalPrice.toFixed(2)} </div>
-            
+        let row = document.createElement('tr');
+        row.classList.add('item__row');
+        row.innerHTML = `
+            <td><img src="${item.image}" alt="${item.name}" class="item__image""></td>
+            <td>${item.name}</td>
+            <td>$${item.originalPrice.toFixed(2)}</td>
+            <td>${item.quantity}</td>
+            <td class="total__price__td">$${totalPrice.toFixed(2)}</td>
         `;
-        cartContainer.appendChild(itemElement);
+        tableBody.appendChild(row);
     });
+
+    table.appendChild(tableBody);
+    cartContainer.appendChild(table);
 }
+
+// END TABLE FOR CART ITEMS
 
 
 

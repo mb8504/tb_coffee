@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>True Believer Coffee</title> 
     <script src="/js/menu.js" defer></script>
+    <script src="/js/product_click.js" defer></script>
+    <script src="/js/common.js" defer></script>
+
 </head>
 <body>
     
@@ -14,6 +17,7 @@
         <div class="header__container container">
             <span class="nav__icon nav__icon--mobile"><a href="/cart.html"><i class="dark-icon fas fa-cart-plus fa-2x"></i></a></span>
             <div class="cart-items cart-items__mobile" id="cartCountMobile">0</div>
+            
 
             <div class="header__logo">
                 <a href="/index.html"><img class="header__logo__img"  src="/images/tb_logo_final.png" alt=""></a>
@@ -33,7 +37,7 @@
                     </span>
                 </div>
             </nav>
-            
+
         </div>
     </header>
 
@@ -66,7 +70,7 @@
                     <button class="counter__button" onclick="increaseQuantity()">
                         <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>
                     </button>
-                    <script src="/js/product_click.js" defer></script>
+
                 </div>
                 <button class="cart__add" onclick="addItemToCart()">Add to Cart</button>
             </div>

@@ -92,6 +92,10 @@ function updateCartDisplay() {
 
     table.appendChild(tableBody);
     cartContainer.appendChild(table);
+
+    // Toggle visibility of clear cart button
+    let clearCartButton = document.getElementById('clearCartButton');
+    clearCartButton.style.display = shoppingCart.items.length > 0 ? 'block' : 'none';
 }
 
 // END TABLE FOR CART ITEMS
@@ -135,6 +139,7 @@ function addItemToCart() {
 
     // Save the cart to local storage
     saveCartToLocalStorage('shoppingCart');
+    
 }
 
 
@@ -159,8 +164,26 @@ function updateCartCount() {
 loadCartFromLocalStorage();
 
 
-// <------- START CART PAGE ------->
+// <------- START CART CLEAR CART  ------->
+
+// Function to clear the cart
+function clearCart() {
+    // Reset the shoppingCart object
+    shoppingCart = {
+        items: [],
+        totalQuantity: 0,
+        totalPrice: 0.00,
+    };
+
+    // Update cart display and count
+    updateCartDisplay();
+    updateCartCount();
+
+    // Clear cart data from local storage
+    localStorage.removeItem('shoppingCart');
+    localStorage.removeItem('cartCountElementMobile');
+    localStorage.removeItem('cartCountElementDesktop');
+}
 
 
-
-// <------- END CART PAGE ------->
+// <------- END CLEAR  CART PAGE ------->

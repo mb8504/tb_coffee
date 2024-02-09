@@ -346,6 +346,7 @@ button {
 /* START FOOTER – NEWSLETTER*/
 .footer__newsletter__container {
     text-align: center;
+    margin-top: 8rem;
 }
 
 .footer__title {
@@ -739,5 +740,10 @@ button {
 .cart__total__plus__clear {
     margin-top: 8rem;
 }
+
+#clearCartButton {
+    display: none;
+}
+
 
 /* END CART PAGE */

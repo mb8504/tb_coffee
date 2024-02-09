@@ -727,6 +727,12 @@ button {
 
 .cart__clear {
     margin-bottom: 8rem;
+    text-align: center;
+}
+
+.center__button {
+    display: flex;
+    justify-content: center;
 }
 
 .text-left {

@@ -29,16 +29,6 @@ function updateTotalAmount() {
 // END PRICE CHANGE
 
 
-
-
-
-
-
-
-
-
-
-
 // Assume you have a shopping cart object
 let shoppingCart = {
     items: [],

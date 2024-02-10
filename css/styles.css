@@ -402,6 +402,7 @@ button {
 
 .footer__social__text {
     font-size: .8rem;
+    margin-bottom: 1rem;
 }
 /* END FOOTER SOCIAL MEDIA */
 
@@ -605,6 +606,15 @@ button {
     min-height: 55vh;
 }
 
+.store {
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.store__hours {
+    margin-top: 4rem;
+}
+
 /* END CONTACT PAGE */
 
 
@@ -750,6 +760,5 @@ button {
 #clearCartButton {
     display: none;
 }
-
 
 /* END CART PAGE */

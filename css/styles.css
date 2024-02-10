@@ -411,7 +411,7 @@ button {
 
 .header--store {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.3)), url(images/store_page_hero.png);
+        rgba(0, 0, 0, 0.3)), url(../../images/store_page_hero.png);
     background-size: cover;
     background-position: center;
     color: white;

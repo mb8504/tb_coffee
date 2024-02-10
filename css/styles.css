@@ -600,7 +600,7 @@ button {
 /* START CONTACT PAGE */
 .header--contact {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.3)), url(/images/contact_hero.jpg);
+        rgba(0, 0, 0, 0.3)), url(../../images/contact_hero.jpg);
     background-size: cover;
     background-position: center;
     color: white;
